@@ -1,5 +1,7 @@
-# Real Estate 
-### Group Members:
+# Real Estate Project
+### Aim:
+This project aims at simulating a financial dealer to help stakeholders/investors to gain some insights about Australia Victoria's real estate market, including answering some key busines questions like: What are the top 10 suburbs that's most likely to increase the rental price in the next 3,5, or even 10 years. This research involves scraping dataset from domain.com.au - a real estate website in Australia, and obtains about 1 million records in total (20.10.2023), EDA to gain some insights for my stakeholders, and incorporates both machine learning and statistical methods to help our stakeholders answer the above questions.  
+### Author:
 * Ngoc Duy Tran: ngocduyt@student.unimelb.edu.au
 
 # Structure of Directory
@@ -44,7 +46,7 @@ For reproducibility, please just only run `download_external_factors.py` only. I
 
 ## 2. PREPROCESSING
 ### 2.1 Real Estate related data
-- Run `notebooks/download/postcode_to_suburb.ipynb`: Note that this notebook might not work as this scrapes the ABS Census website. This notebook has been recorded not working properly one time (05/10/2023) when the server is under maintenance due to increasing volume. However, this is not our fault, it's ABS's issue. It might also take about 30 mins (on my computer) to finish.
+- Run `notebooks/download/postcode_to_suburb.ipynb`: Note that this notebook might not work as this scrapes the ABS Census website. This notebook has been recorded not working properly one time (05/10/2023) when the server is under maintenance due to increasing volume. However, this is not our fault, it's ABS's issue.
 - Run `notebooks/preprocessing/raw_real_estate.ipynb`: landing --> raw for real estate data
 - Run `notebooks/preprocessing/raw_ptv_data.ipynb` (prereq for aggregate_feature notebook): landing --> raw for ptv data
 - Run `notebooks/preprocessing/aggregate_feature.ipynb`: aggrgate external features for merging with real estate data
@@ -69,11 +71,11 @@ For reproducibility, please just only run `download_external_factors.py` only. I
 
 # NOTES
 - Please do not run any other files apart from the files specified above. We'll explain below:
-- The `notebooks/supporting_notebooks` acts like a supporting folder which helps us achieve the results in the above-specified folders. In other words, it acts like a playground for us to have an overview of the data and acts like an intermediate layer before we integrate the code into other folders such as preprocessing, download, ...
+- The `notebooks/supporting_notebooks` acts like a supporting folder which helps achieve the results in the above-specified folders. In other words, it acts like a playground for us to have an overview of the data and acts like an intermediate layer before we integrate the code into other folders such as preprocessing, download, ...
 - This folder also contains some of the future work that we specified in the summary_notebook/future_exploration such as integrating property area as a feature. If you run wanna this, you will need to manually order and retrieve from the data.vic
 - notebooks/supporting_notebooks is not part of the pipeline, so do not run this folder. Although it is irrelevant to the main pipeline specified above, I decided to keep these notebooks in case we need to continue to work on this project in the future.
 - notebooks/preprocessing/income_population_projection is the previous version of notebooks/download/postcode_to_suburb.ipynb. The former is by SA2 while the latter is by postcodee, which is much smaller and better. We still decided to keep this `notebooks/preprocessing/income_population_projection` as a backup plan because the ABS Census website that the newer version is working on has been recorded to be under maintenance on 05/10/2023, which makes the newer version fail to work. Also do not run this as well because we haven't specified the order of running.
 
 
 # CONTACT
-- Should you have any questions during running this repo, please contact me via the emails above.
+- Should you have any questions during running this repo, please contact me via the email above.
